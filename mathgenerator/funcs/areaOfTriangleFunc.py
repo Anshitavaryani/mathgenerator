@@ -1,14 +1,11 @@
-from  .__init__ import *
-
-
-def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
-    a = random.randint(1, maxA)
-    b = random.randint(1, maxB)
-    c = random.randint(1, maxC)
-
-    s = (a + b + c) / 2
-    area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
-
-    problem = "Area of triangle with side lengths: " + str(a) + " " + str(b) + " " + str(c) + " = "
-    solution = area
-    return problem, solution
+# Three sides of the triangle is a, b and c:  
+a = float(input('Enter first side: '))  
+b = float(input('Enter second side: '))  
+c = float(input('Enter third side: '))  
+  
+# calculate the semi-perimeter  
+s = (a + b + c) / 2  
+  
+# calculate the area  
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5  
+print('The area of the triangle is %0.2f' %area)   
